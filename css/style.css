@@ -67,8 +67,6 @@ body {
 .main-header-product-photo {
     display: block;
     background-color: #ffffff;
-    width: 469px;
-    height: 214px;
     float: right;
 }
 
@@ -77,9 +75,16 @@ body {
 .about-product {
     background-color: #ffffff;
     width: 100%;
-    min-height: 323px;
+    min-height: 320px;
     padding: 50px;
     box-sizing: border-box;
+}
+
+.about-product:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
 }
 
 .about-product-wrp {
@@ -117,8 +122,6 @@ body {
 .about-product-video {
     display: block;
     background-color: #445161;
-    width: 469px;
-    height: 214px;
     float: right;
 }
 
@@ -194,7 +197,6 @@ body {
 .screenshots {
     width: 100%;
 
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -214,7 +216,7 @@ body {
 }
 
 .screenshots-item {
-    width: 50%;
+    width: 49%;
     margin: 0 0 30px 0;
     box-sizing: border-box;
 
@@ -223,7 +225,6 @@ body {
     align-items: flex-start;
 }
 
-
 .screenshots-item:nth-child(4),
 .screenshots-item:nth-child(5) {
     margin: 0;
@@ -231,8 +232,6 @@ body {
 
 .screenshots-photo {
     display: block;
-    width: 200px;
-    height: 150px;
     margin: 0 15px 0 0;
     background-color: #445161;
 }
@@ -252,8 +251,8 @@ body {
 }
 
 .screenshots-item-txt p {
-    margin: 0;
-    padding: 20px 15px 0 0;
+    margin: 10px 0 0 0;
+    padding: 0;
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
@@ -269,7 +268,6 @@ body {
 
 .reviews {
     width: 100%;
-
 
     display: flex;
     flex-wrap: wrap;
@@ -299,7 +297,6 @@ body {
     align-items: flex-start;
 }
 
-
 .reviews-item:nth-child(4),
 .reviews-item:nth-child(5) {
     margin: 0;
@@ -307,44 +304,21 @@ body {
 
 .reviews-photo {
     display: block;
-    width: 75px;
-    height: 75px;
     border-radius: 50%;
     background: url(img/Lourens.jpg) no-repeat -35px -35px;
-    background-size: auto 75px;
-    margin: 0 15px 0 0;
+    margin: 0 20px;
     background-color: #445161;
 }
 
-.reviews-item-txt {
-    width: 80%;
-    height: 100%;
+.reviews-wrp {
+    background-color: #ccc;
+    position: relative;
+    border-radius: 5px;
+    padding: 15px;
     box-sizing: border-box;
 }
 
-.reviews-item-txt span {
-    margin: 0;
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 400;
-    color: #445161;
-
-}
-
-.reviews-item-txt p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 400;
-    color: #333333;
-    width: 70%;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #ccc;
-    position: relative;
-}
-
-.reviews-item-txt p:before {
+.reviews-wrp:before {
     content: "";
     border: 15px solid transparent;
     border-right: 15px solid #ccc;
@@ -352,6 +326,22 @@ body {
     position: absolute;
     top: 20px;
     left: -30px;
+}
+
+.reviews-item-txt span {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #989898;
+}
+
+.reviews-item-txt p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: #333333;
 }
 
 /* 6 block */
